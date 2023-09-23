@@ -23,7 +23,7 @@ globalThis.app = createApp({
 			amount: 0,
 			description: "",
 			pDate: "",
-			currency: "$"
+			currency: "BZD"
 		}
 	},
 
@@ -56,97 +56,70 @@ globalThis.app = createApp({
 			const currency = this.form.currency;
 			const formAmount = this.form.amount.toFixed(2);
 			let amount = this.form.amount.toFixed(2);
-
-			if(payer==="" || payingTo==="" || formAmount===0 || description==="" || pDate==="") {
-				this.errors = "* Please fill out all the fields!";
-				return false;
-			} 
-			
-			if(currency === "MXN") {
-				amount = (this.currencyConvert("MXN", "BZD", amount)).toFixed(2)
-			} else if(currency === "GTQ") {
-				amount = (this.currencyConvert("GTQ", "BZD", amount)).toFixed(2)
+		  
+			// Check if any of the required fields are empty or the amount is zero
+			if (payer === "" || payingTo === "" || formAmount === "0.00" || description === "" || pDate === "") {
+			  this.errors = "* Please fill out all the fields!";
+			  return false;
 			}
-
-			if (confirm("Are you sure you want to add this payment? If so click 'OK'")) {
-				let personAOwes = 0;
-				if(payer===this.personB && payingTo===this.personA) {
-					personAOwes = amount;
-				} else if(payer===this.personB && payingTo===this.joint || payer===this.joint && payingTo===this.personA) {
-					personAOwes = (amount/2).toFixed(2);
-				} else {
-					personAOwes = 0;
-				}
-
-				let personBOwes = 0;
-				if(payer===this.personA && payingTo===this.personB) {
-					personBOwes = amount;
-				} else if(payer===this.personA && payingTo===this.joint || payer===this.joint && payingTo===this.personB) {
-					personBOwes = (amount/2).toFixed(2);
-				} else {
-					personBOwes = 0;
-				}
-
-				this.totalPersonAOwes += Number(personAOwes);
-
-				this.totalPersonBOwes += Number(personBOwes);
-
-				this.expenses.push({
-					payer,
-					payingTo,
-					amount,
-					description,
-					pDate,
-					personAOwes,
-					personBOwes, 
-					currency,
-					formAmount
-				});
-				this.form={
-					payer: "",
-					payingTo: "",
-					amount: 0,
-					description: "",
-					pDate: "",
-					currency: "$"
-				};
-				this.errors = "";
+		  
+			// Currency conversion (you can customize this part)
+			if (currency === "MXN") {
+			  amount = (this.currencyConvert("MXN", "BZD", amount)).toFixed(2);
+			} else if (currency === "GTQ") {
+			  amount = (this.currencyConvert("GTQ", "BZD", amount)).toFixed(2);
+			}
+		  
+			// Confirm before adding the payment
+			if (confirm("Are you sure you want to add this payment? If so, click 'OK'")) {
+			  // Calculate personAOwes and personBOwes based on payer and payingTo
+			  let personAOwes = 0;
+			  let personBOwes = 0;
+		  
+			  if (payer === this.personB && (payingTo === this.personA || payingTo === this.joint)) {
+				personAOwes = (amount / 2).toFixed(2);
+				personBOwes = (amount / 2).toFixed(2);
+			  } else if (payer === this.personA && (payingTo === this.personB || payingTo === this.joint)) {
+				personAOwes = (amount / 2).toFixed(2);
+				personBOwes = (amount / 2).toFixed(2);
+			  } else if (payer === this.joint && (payingTo === this.personA || payingTo === this.personB)) {
+				personAOwes = 0;
+				personBOwes = 0;
+			  }
+		  
+			  // Update total amounts
+			  this.totalPersonAOwes += Number(personAOwes);
+			  this.totalPersonBOwes += Number(personBOwes);
+		  
+			  // Add the payment to expenses array
+			  this.expenses.push({
+				payer,
+				payingTo,
+				amount,
+				description,
+				pDate,
+				personAOwes,
+				personBOwes,
+				currency,
+				formAmount
+			  });
+		  
+			  // Reset the form and clear errors
+			  this.form = {
+				payer: "",
+				payingTo: "",
+				amount: 0,
+				description: "",
+				pDate: "",
+				currency: "BZD"
+			  };
+			  this.errors = "";
 			} else {
-				return false;
+			  return false;
 			}
-		},
+		  }
+		  
 
-		saveButton() {
-			const buttonElement = document.querySelector('.js-inputButton');
-
-			let inputElement = document.querySelector('.personinput');
-
-			if(buttonElement.innerText === "Save") {
-				inputElement.disabled = true;
-				buttonElement.innerHTML = "Edit";
-			} else {
-				inputElement.disabled = false;
-				buttonElement.innerHTML = "Save";
-			}
-		},
-
-		saveButton2() {
-			const buttonElement = document.querySelector('.js-inputButton2');
-
-			let inputElement = document.querySelector('.person2input');
-
-			if(buttonElement.innerText === "Save") {
-				inputElement.disabled = true;
-				buttonElement.innerHTML = "Edit";
-			} else {
-				inputElement.disabled = false;
-				buttonElement.innerHTML = "Save";
-			}
-		}
-
-		/*deleteRow(index) {
-			this.expenses.splice(index, 1);
-		},*/
 	},
 
 	computed: {

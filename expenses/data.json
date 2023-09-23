@@ -7,7 +7,7 @@
 		"pDate": "01/09/2023",
 		"personAOwes": 1776.5,
 		"personBOwes": 1776.5,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 3553
 	},
 	{
@@ -18,7 +18,7 @@
 		"pDate": "02/09/2023",
 		"personAOwes": 100,
 		"personBOwes": 100,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 200
 	},
 	{
@@ -29,7 +29,7 @@
 		"pDate": "03/09/2023",
 		"personAOwes": 1141.5,
 		"personBOwes": 1141.5,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 2283
 	},
 	{
@@ -40,7 +40,7 @@
 		"pDate": "04/09/2023",
 		"personAOwes": 100,
 		"personBOwes": 0,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 200
 	},
 	{
@@ -51,7 +51,7 @@
 		"pDate": "05/09/2023",
 		"personAOwes": 0,
 		"personBOwes": 461,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 922
 	},
 	{
@@ -62,7 +62,7 @@
 		"pDate": "01/10/2023",
 		"personAOwes": 1776.5,
 		"personBOwes": 1776.5,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 3553
 	},
 	{
@@ -73,7 +73,7 @@
 		"pDate": "02/10/2023",
 		"personAOwes": 2492,
 		"personBOwes": 0,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 4984
 	},
 	{
@@ -84,7 +84,7 @@
 		"pDate": "03/10/2023",
 		"personAOwes": 0,
 		"personBOwes": 415,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 830
 	},
 	{
@@ -95,7 +95,7 @@
 		"pDate": "01/11/2023",
 		"personAOwes": 1776.5,
 		"personBOwes": 1776.5,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 3553
 	},
 	{
@@ -106,7 +106,7 @@
 		"pDate": "02/11/2023",
 		"personAOwes": 0,
 		"personBOwes": 26.5,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 53
 	},
 	{
@@ -117,7 +117,7 @@
 		"pDate": "03/11/2023",
 		"personAOwes": 0,
 		"personBOwes": 100,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 200
 	},
 	{
@@ -128,7 +128,7 @@
 		"pDate": "04/11/2023",
 		"personAOwes": 28,
 		"personBOwes": 0,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 56
 	},
 	{
@@ -139,7 +139,7 @@
 		"pDate": "05/11/2023",
 		"personAOwes": 0,
 		"personBOwes": 96.04,
-		"currency": "$",
+		"currency": "BZD",
 		"formAmount": 192.08
 	}
 ]
