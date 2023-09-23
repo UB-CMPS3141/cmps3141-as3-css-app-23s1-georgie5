@@ -1,79 +1,146 @@
 [
-    {
-        "pDate": "9/17/2023",
-        "payer": "Neo",
-        "payingTo": "Trinity",
-        "amount": 75,
-        "formAmount": 75,
-        "description": "Groceries",
-        "personAOwes": 0,
-        "personBOwes": 75,
-        "currency": "$"
-    },
-    {
-        "pDate": "9/18/2023",
-        "payer": "Trinity",
-        "payingTo": "Neo",
-        "amount": 125,
-        "formAmount": 125,
-        "description": "Movie Tickets",
-        "personAOwes": 125,
-        "personBOwes": 0,
-        "currency": "$"
-    },
-    {
-        "pDate": "9/19/2023",
-        "payer": "Trinity",
-        "payingTo": "Neo",
-        "amount": 50,
-        "formAmount": 50,
-        "description": "Coffee",
-        "personAOwes": 50,
-        "personBOwes": 0,
-        "currency": "$"
-    },
-    {
-        "pDate": "9/20/2023",
-        "payer": "Neo",
-        "payingTo": "Trinity",
-        "amount": 30,
-        "formAmount": 30,
-        "description": "Lunch",
-        "personAOwes": 0,
-        "personBOwes": 30,
-        "currency": "$"
-    },
-    {
-        "pDate": "9/21/2023",
-        "payer": "Neo",
-        "payingTo": "Trinity",
-        "amount": 45,
-        "formAmount": 45,
-        "description": "Dinner",
-        "personAOwes": 0,
-        "personBOwes": 45,
-        "currency": "$"
-    },
-    {
-        "pDate": "9/22/2023",
-        "payer": "Trinity",
-        "payingTo": "Neo",
-        "amount": 60,
-        "formAmount": 60,
-        "description": "Snacks",
-        "personAOwes": 60,
-        "personBOwes": 0,
-        "currency": "$"
-    },
-    {
-        "pDate": "9/23/2023",
-        "payer": "Neo",
-        "payingTo": "Trinity",
-        "amount": 25,
-        "formAmount": 25,
-        "description": "Gasoline",
-        "personAOwes": 0,
-        "personBOwes": 25,
-        "currency": "$"
-    }
+	{
+		"payer": "Trinity",
+		"payingTo": "Neo",
+		"amount": 3553,
+		"description": "Rent, Sept 2023",
+		"pDate": "01/09/2023",
+		"personAOwes": 1776.5,
+		"personBOwes": 1776.5,
+		"currency": "$",
+		"formAmount": 3553
+	},
+	{
+		"payer": "Neo",
+		"payingTo": "Trinity",
+		"amount": 200,
+		"description": "Locksmith",
+		"pDate": "02/09/2023",
+		"personAOwes": 100,
+		"personBOwes": 100,
+		"currency": "$",
+		"formAmount": 200
+	},
+	{
+		"payer": "Trinity",
+		"payingTo": "Neo",
+		"amount": 2283,
+		"description": "Joint credit card Sep 2023",
+		"pDate": "03/09/2023",
+		"personAOwes": 1141.5,
+		"personBOwes": 1141.5,
+		"currency": "$",
+		"formAmount": 2283
+	},
+	{
+		"payer": "Trinity",
+		"payingTo": "Joint",
+		"amount": 200,
+		"description": "Cleaner",
+		"pDate": "04/09/2023",
+		"personAOwes": 100,
+		"personBOwes": 0,
+		"currency": "$",
+		"formAmount": 200
+	},
+	{
+		"payer": "Neo",
+		"payingTo": "Trinity",
+		"amount": 922,
+		"description": "Trinity Laptop repair",
+		"pDate": "05/09/2023",
+		"personAOwes": 0,
+		"personBOwes": 461,
+		"currency": "$",
+		"formAmount": 922
+	},
+	{
+		"payer": "Trinity",
+		"payingTo": "Neo",
+		"amount": 3553,
+		"description": "Rent Oct 2023",
+		"pDate": "01/10/2023",
+		"personAOwes": 1776.5,
+		"personBOwes": 1776.5,
+		"currency": "$",
+		"formAmount": 3553
+	},
+	{
+		"payer": "Trinity",
+		"payingTo": "Joint",
+		"amount": 4984,
+		"description": "Joint credit card Oct 2023",
+		"pDate": "02/10/2023",
+		"personAOwes": 2492,
+		"personBOwes": 0,
+		"currency": "$",
+		"formAmount": 4984
+	},
+	{
+		"payer": "Neo",
+		"payingTo": "Trinity",
+		"amount": 830,
+		"description": "Trinity implant payment 2",
+		"pDate": "03/10/2023",
+		"personAOwes": 0,
+		"personBOwes": 415,
+		"currency": "$",
+		"formAmount": 830
+	},
+	{
+		"payer": "Trinity",
+		"payingTo": "Neo",
+		"amount": 3553,
+		"description": "Rent Nov 2023",
+		"pDate": "01/11/2023",
+		"personAOwes": 1776.5,
+		"personBOwes": 1776.5,
+		"currency": "$",
+		"formAmount": 3553
+	},
+	{
+		"payer": "Neo",
+		"payingTo": "Trinity",
+		"amount": 53,
+		"description": "Trinity phone case",
+		"pDate": "02/11/2023",
+		"personAOwes": 0,
+		"personBOwes": 26.5,
+		"currency": "$",
+		"formAmount": 53
+	},
+	{
+		"payer": "Neo",
+		"payingTo": "Trinity",
+		"amount": 200,
+		"description": "Trinity new boots",
+		"pDate": "03/11/2023",
+		"personAOwes": 0,
+		"personBOwes": 100,
+		"currency": "$",
+		"formAmount": 200
+	},
+	{
+		"payer": "Trinity",
+		"payingTo": "Neo",
+		"amount": 56,
+		"description": "Neo new boots",
+		"pDate": "04/11/2023",
+		"personAOwes": 28,
+		"personBOwes": 0,
+		"currency": "$",
+		"formAmount": 56
+	},
+	{
+		"payer": "Neo",
+		"payingTo": "Joint",
+		"amount": 192.08,
+		"description": "Electricity bill Oct-Nov 2023",
+		"pDate": "05/11/2023",
+		"personAOwes": 0,
+		"personBOwes": 96.04,
+		"currency": "$",
+		"formAmount": 192.08
+	}
 ]
+		
