@@ -9,8 +9,92 @@ Date: Sept.22.23
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fix the Web with CSS!</title>
+
+	<style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            background-color: #0078d4;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #0078d4;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+
+        li {
+            margin-bottom: 10px;
+        }
+
+
+        .screenshots {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .screenshots img {
+            max-width: 80%;
+            margin: 10px 0;
+        }
+
+        .screenshots h3 {
+            font-size: 18px;
+            color: #0078d4;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
+	<h1>Exercise 1 Usability Fixes</h1>
+    <p>
+        This is the website I chose: <a href="https://acme.com/"> ACME Laboratories</a> 
+    </p>
+
+    <div class="screenshots">
+		<img src="before.png" alt="before image"/>
+		<h3>Before</h3>
+		<img src="after.png" alt="after image"/>
+		<h3>After</h3>
+	</div>
+	
+
+
+    <h2>Fix 1: Improve Readability and Legibility (Learnability)</h2>
+    <p>
+        To enhance learnability, the following changes were made:
+    </p>
+    <ul>
+        <li>Changed font to Arial, Helvetica, sans-serif for better readability.</li>
+        <li>Increased text size to 16px for improved legibility.</li>
+        <li>Increased line spacing to 2 for easier reading.</li>
+        <li>Limited the maximum line length to 900px for better readability on wider screens.</li>
+        <li>Changed the background color to a more visually appealing #f5f5f5.</li>
+    </ul>
+
+    <h2>Fix 2: Enhance Navigation (Efficiency and Safety)</h2>
+    <p>
+        To improve efficiency and safety, the following navigation changes were implemented:
+    </p>
+    <ul>
+        <li>Styled navigation links with a #4000d4 color and made them bold for better visibility.</li>
+        <li>Added a padding for the links so there is no confusion on the links for safety reasons</li>
+        <li>Added a hover psuedocode for the links. Background color of #cfcf0d and border radius when hovered to distinguish each link when hovered</li>
+    </ul>
 
 </body>
 </html>
