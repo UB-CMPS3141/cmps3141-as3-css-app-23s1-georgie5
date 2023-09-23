@@ -1,12 +1,12 @@
 [
 	{
 		"payer": "Trinity",
-		"payingTo": "Neo",
+		"payingTo": "joint",
 		"amount": 3553,
 		"description": "Rent, Sept 2023",
 		"pDate": "01/09/2023",
-		"personAOwes": 1776.5,
-		"personBOwes": 1776.5,
+		"personAOwes": 0,
+		"personBOwes": 0,
 		"currency": "BZD",
 		"formAmount": 3553
 	},
@@ -16,7 +16,7 @@
 		"amount": 200,
 		"description": "Locksmith",
 		"pDate": "02/09/2023",
-		"personAOwes": 100,
+		"personAOwes": 0,
 		"personBOwes": 100,
 		"currency": "BZD",
 		"formAmount": 200
@@ -28,7 +28,7 @@
 		"description": "Joint credit card Sep 2023",
 		"pDate": "03/09/2023",
 		"personAOwes": 1141.5,
-		"personBOwes": 1141.5,
+		"personBOwes": 0,
 		"currency": "BZD",
 		"formAmount": 2283
 	},
@@ -50,7 +50,7 @@
 		"description": "Trinity Laptop repair",
 		"pDate": "05/09/2023",
 		"personAOwes": 0,
-		"personBOwes": 461,
+		"personBOwes": 922,
 		"currency": "BZD",
 		"formAmount": 922
 	},
@@ -60,8 +60,8 @@
 		"amount": 3553,
 		"description": "Rent Oct 2023",
 		"pDate": "01/10/2023",
-		"personAOwes": 1776.5,
-		"personBOwes": 1776.5,
+		"personAOwes": 3553,
+		"personBOwes": 0,
 		"currency": "BZD",
 		"formAmount": 3553
 	},
@@ -94,7 +94,7 @@
 		"description": "Rent Nov 2023",
 		"pDate": "01/11/2023",
 		"personAOwes": 1776.5,
-		"personBOwes": 1776.5,
+		"personBOwes": 0,
 		"currency": "BZD",
 		"formAmount": 3553
 	},
@@ -105,7 +105,7 @@
 		"description": "Trinity phone case",
 		"pDate": "02/11/2023",
 		"personAOwes": 0,
-		"personBOwes": 26.5,
+		"personBOwes": 53,
 		"currency": "BZD",
 		"formAmount": 53
 	},
@@ -116,7 +116,7 @@
 		"description": "Trinity new boots",
 		"pDate": "03/11/2023",
 		"personAOwes": 0,
-		"personBOwes": 100,
+		"personBOwes": 200,
 		"currency": "BZD",
 		"formAmount": 200
 	},
@@ -126,7 +126,7 @@
 		"amount": 56,
 		"description": "Neo new boots",
 		"pDate": "04/11/2023",
-		"personAOwes": 28,
+		"personAOwes": 56,
 		"personBOwes": 0,
 		"currency": "BZD",
 		"formAmount": 56

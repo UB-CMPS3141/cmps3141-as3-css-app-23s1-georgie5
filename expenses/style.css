@@ -4,35 +4,21 @@ Collaborators:
 Date: Sept.22.23
 */
 /* Add spacing and alignment */
-body {
-  margin: 0;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-/* Apply consistent typography and colors */
-h1, h2 {
-  color: #000000;
-  margin-bottom: 10px;
-}
-
+/* Reset some default browser styles */
 h1 {
-  font-size: 24px;
+  text-align: center;
+  background-color: #0056b3;
+  color: white !important;
 }
-
-h2 {
-  font-size: 20px;
+#error{
+  color:red !important;
 }
-
-form {
-  margin-bottom: 20px;
-}
-
-input, select, button {
-  margin-bottom: 10px;
-}
-
 /* Style the expense list table */
+.expenselist {
+  margin-top: 43%; /* Adjust the margin-top to your preferred spacing */
+  margin-left: 3%;
+  margin-right: 3%;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -61,4 +47,110 @@ th {
   table {
     font-size: 12px;
   }
+  .left-section {
+    width: 20%; 
+    padding: 20px;
+    margin-left: 5%;
+    background-color: #f9f9f9; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: left; 
+  }
+  .right-section {
+    width: 20%; 
+    padding: 20px;
+    margin-right: 5%;
+    margin-top: 10%;
+    background-color: #f0f0f0; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: right; 
+  }
+  .expenselist {
+    margin-top: 100%; /* Adjust the margin-top to your preferred spacing */
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+
+.left-section {
+  width: 40%; 
+  padding: 20px;
+  margin-left: 5%;
+  background-color: #f9f9f9; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  float: left; 
+}
+
+
+.right-section {
+  width: 40%; 
+  padding: 20px;
+  margin-right: 5%;
+  margin-top: 10%;
+  background-color: #f0f0f0; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  float: right; 
+}
+
+/* Style the "Add Expense" form */
+.add-expense {
+  background-color: #fff; /* White background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form fields and labels */
+.form-group {
+  margin-bottom: 15px; /* Add some vertical spacing between form groups */
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  font-weight: bold; /* Make labels bold */
+}
+
+select, input[type="number"], input[type="text"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style the "Add Payment" button */
+.paymentButton {
+  background-color: #007BFF; /* Blue button color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.paymentButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style the "Balance Calculation" section */
+#balance {
+  text-align: center;
+  background-color: #fff; /* White background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 19px;
+}
+
+/* Add some spacing between sections */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }

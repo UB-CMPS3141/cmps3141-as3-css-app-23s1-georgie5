@@ -16,114 +16,94 @@ Date: Sept.22.23
 	<!-- Replace cmps3141-as3-css_app-23s1 below with your repo name (cmps3141-as3-css_app-23s1-yourusername) so you can save!  -->
 	<ma-data v-model="expenses" src="https://github.com/UB-CMPS3141/cmps3141-as3-css-app-23s1-georgie5/expenses/data.json"></ma-data>
 
-	<!-- App YOUR UI here -->
+	<!-- App YOUR UI here --> 
+	<h1>Task 2: Wireframe of app</h1>
+<div class="container"> 
+    <section class="left-section">
+       
 
-	<section style="padding-bottom: 20px;"> 
-		<h1>Task 2: Wireframe of app</h1>
-	
-		<h3>Add Expense</h3>
-	   <form>
-		   <table class="addexpensetable">
-				<tr>
-				   <td>
-					   <label for="payer">Payer:</label>
-				   </td>
-				   <td>
-					   <select v-model="form.payer">
-						   <option :value=personA>{{personA}}</option>
-						   <option :value=personB>{{personB}}</option>
-						   <option value=joint>{{joint}}</option> 
-					   </select>
-				   </td>
-			   </tr>
-			   <tr>
-				   <td>
-					   <label for="payingTo">Payment For:</label>
-				   </td>
-				   <td>
-					   <select v-model="form.payingTo">
-						   <option :value=personB>{{personB}}</option>
-						   <option value=Joint>{{joint}}</option> 
-						   <option :value=personA>{{personA}}</option>
-					   </select>
-				   </td>
-			   </tr>
-			   <tr>
-				   <td>
-					   <label for="amount">Amount:</label>
-				   </td>
-				   <td>
-					   <select v-model="form.currency">
-						   <option value="BZD">BZD</option>
-						   <option value="MXN">MXN</option> 
-						   <option value="GTQ">GTQ</option>
-					   </select>
-					   <input type="number" min="0.00" v-model="form.amount" style="width: 80px;">
-				   </td>
-			   </tr>
-			   <tr>
-				   <td>
-					   <label for="description">Description:</label>
-				   </td>
-				   <td>
-					   <input type="text" v-model="form.description" placeholder="description">
-				   </td>
-			   </tr>
-			   <tr>
-				   <td>
-					   <label for="pDate">Date of Payment:</label>
-				   </td>
-				   <td>
-					   <input type="date" :max="nowDate" v-model="form.pDate">
-				   </td>
-			   </tr>
-			   <tr>
-				   <td>
-					   <button v-on:click.prevent="addPayment" class="paymentButton">Add Payment</button>
-				   </td>
-			   </tr>
-		   </table>
-	   </form>
-		<!-- Expense List -->
-		<h2>Expense List</h2>
-		<table class="expensetable">
-			<thead>
-				<tr>
-					<th>Date</th>
-					<th>Payer</th>
-					<th>Paid To</th>
-					<th>Amount</th>
-					<th>Description</th>
-					<th>{{personA}} Owes</th>
-					<th>{{personB}} Owes</th>
-				</tr>
-			</thead>
-		<tbody>
-			<tr v-for="(expense, index) in expenses":key="expense.id">
-				<td>{{expense.pDate}}</td>
-				<td>{{expense.payer}}</td>
-				<td>{{expense.payingTo}}</td>
-				<td>{{expense.currency}} {{expense.formAmount}}</td>
-				<td>{{expense.description}}</td>
-				<td>$ {{expense.personAOwes}}</td>
-				<td>$ {{expense.personBOwes}}</td>
-			</tr>
-	
-		</tbody>
-		</table>
-		
-		<!-- Balance Calculation -->
-		<div id='balance'>
-				<h2>Balance Calculation</h2>
-				<p>Total {{personA}} owes: $ {{(totalPersonAOwes-totalPersonBOwes).toFixed(2)}} </p>
-				<p>Total {{personB}} owes: $ {{(totalPersonBOwes-totalPersonAOwes).toFixed(2)}}</p>
-		</div>
-
+        <div class="add-expense">
+            <h3>Add Expense</h3>
+            <p id="error">{{ errors }}</p>
+            <form>
+                <div class="form-group">
+                    <label for="payer">Payer:</label>
+                    <select v-model="form.payer">
+                        <option :value="personA">{{ personA }}</option>
+                        <option :value="personB">{{ personB }}</option>
+                        <option value="joint">{{ joint }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="payingTo">Payment For:</label>
+                    <select v-model="form.payingTo">
+                        <option :value="personB">{{ personB }}</option>
+                        <option value="Joint">{{ joint }}</option>
+                        <option :value="personA">{{ personA }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <select v-model="form.currency">
+                        <option value="BZD">BZD</option>
+                        <option value="MXN">MXN</option>
+                        <option value="GTQ">GTQ</option>
+                    </select>
+                    <input type="number" min="0.00" v-model="form.amount" style="width: 80px;">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input type="text" v-model="form.description" placeholder="description">
+                </div>
+                <div class="form-group">
+                    <label for="pDate">Date of Payment:</label>
+                    <input type="date" :max="nowDate" v-model="form.pDate">
+                </div>
+                <div class="form-group">
+                    <button v-on:click.prevent="addExpense" class="paymentButton">Add Payment</button>
+                </div>
+            </form>
+        </div>
 	</section>
+	<section class="right-section">
+        <!-- Balance Calculation -->
+        <div id='balance'>
+            <h2>Balance Calculation</h2>
+            <p>Total {{ personA }} owes: $ {{ total_balance.totalPersonAOwes.toFixed(2) }}</p>
+            <p>Total {{ personB }} owes: $ {{ total_balance.totalPersonBOwes.toFixed(2) }}</p>
+        </div>
+    </section>
+</div>
+    <div class="expenselist"> 
 
+        <h2>Expense List</h2>
+        <table >
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Payer</th>
+                <th>Paid To</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>{{ personA }} Owes</th>
+                <th>{{ personB }} Owes</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(expense, index) in expenses" :key="expense.id">
+                <td>{{ expense.pDate }}</td>
+                <td>{{ expense.payer }}</td>
+                <td>{{ expense.payingTo }}</td>
+                <td>{{ expense.currency }} {{ expense.formAmount }}</td>
+                <td>{{ expense.description }}</td>
+                <td>$ {{ expense.personAOwes }}</td>
+                <td>$ {{ expense.personBOwes }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div> 
 
-	<!-- Delete this line when you write your actual UI -->
-
+    
 </div>
 
 <script src="index.js" type="module"></script>
